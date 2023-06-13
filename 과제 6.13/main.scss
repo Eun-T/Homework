@@ -28,4 +28,8 @@ $font-size: (
   xx-large: 32px,
   x-large: 48px,
   large: 60px
-)
+);
+
+body {
+  background-color: map-get($color, "dark" );
+}
