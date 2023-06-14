@@ -4,6 +4,7 @@ $color: (
   grey: #6B7684,
   white: #fff,
   black: #000,
+  grey2: #F2F3F4,
 );
 
 $radius: (
@@ -26,10 +27,393 @@ $font-size: (
   x-medium: 21px,
   medium: 24px,
   xx-large: 32px,
+  xe-large: 36px,
   x-large: 48px,
   large: 60px
 );
 
-body {
-  background-color: map-get($color, "dark" );
+a {
+  display: block;
+  text-decoration: none
+};
+
+@mixin btn($width,$height){
+  width: $width;
+  height: $height;
+  // color: $color;
+  // background-color: $bgcolor;
+  //버튼 만들기
 }
+
+.header {
+  padding-block: 20px;
+  background-color:map-get($color,white);
+  &__container {
+    padding-inline: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > h1 {
+      a {
+        font-size: map-get($font-size, "xx-large");
+        img {
+
+        }
+      }
+    }
+
+    > .btn--group {
+      .question {
+        display: none;
+        @include btn(90px, 30px);
+        color: map-get($color,"black");
+        background-color: map-get($color,"white");
+        font-size: map-get($font-size,"xxx-small")
+      };
+      .start {
+        display: flex;
+        @include btn(90px, 30px);
+        color: map-get($color,white);
+        background-color: map-get($color,green);
+        font-size: map-get($font-size,xxx-small);
+        border-radius: map-get($radius,small);
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+main {
+  .section__home {
+    width: 100%;
+    height: 192px;
+    // background-image: url("./assets/images/Rectangle.png");
+    //아마 경로가 css와 scss가 달라서 그런듯?
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__container {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      * {
+        z-index: 10;
+      }
+      h2 {
+        text-align: center;
+        color: map-get($color,white);
+        font-size: map-get($font-size,medium);
+        font-weight: map-get($font-weight,bold);
+        line-height: 28.8px;
+        letter-spacing: -.9px;
+      }
+      a {
+        display: none;
+        color: white;
+      }
+    }
+  }
+
+  .section__service {
+    
+    &__container {
+
+      > h3 {
+        text-align: center;
+        color: map-get($color,green);
+        font-weight: map-get($font-weight,bold);
+        font-size: map-get($font-size,x-medium);
+        line-height: 25.2px;
+        letter-spacing: -.79px;
+        span {
+          font-weight: map-get($font-weight,light);
+        }
+      }
+
+      > a {
+        text-align: center;
+      }
+
+      .service__grid {
+        display: grid;
+        grid-template-columns: 293px;
+        justify-content: center;
+        &__item {
+          &:nth-child(1){
+            color: blue;
+            .service__image {
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .section__realstate {
+    
+    &__container {
+
+      > h3 {
+        text-align: center;
+        color: map-get($color,green);
+        font-weight: map-get($font-weight,bold);
+        font-size: map-get($font-size,x-medium);
+        line-height: 25.2px;
+        letter-spacing: -.79px;
+        span {
+          font-weight: map-get($font-weight,light);
+        }
+      }
+
+      > a {
+        text-align: center;
+      }
+
+      .realstate__grid {
+        display: grid;
+        grid-template-columns: 293px;
+        justify-content: center;
+        &__item {
+          &:nth-child(1){
+            color: blue;
+            .realstate__image {
+
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .section__security {
+    
+    &__container {
+
+      > h3 {
+        text-align: center;
+        color: map-get($color,green);
+        font-weight: map-get($font-weight,bold);
+        font-size: map-get($font-size,x-medium);
+        line-height: 25.2px;
+        letter-spacing: -.79px;
+        span {
+          font-weight: map-get($font-weight,light);
+        }
+      }
+
+      > a {
+        text-align: center;
+      }
+
+      .security__grid {
+        display: grid;
+        grid-template-columns: 292px;
+        justify-content: center;
+        &__item {
+          h4 {
+            &:first-child {
+              font-size: map-get($font-size,x-medium);
+              color: blue;
+              //여기 많이 이상함????
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .section__report {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .report__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h4 {
+          color: map-get($color,green);
+          font-size: map-get($font-size,medium);
+          font-weight: map-get($font-weight,bold);
+        }
+        h3 {
+          color: map-get($color,black);
+          font-size: map-get($font-size,xe-large);
+          font-weight: map-get($font-weight,bold);
+          line-height: 43.2px;
+          letter-spacing: -1.35px;
+        }
+        p {
+          font-weight: map-get($font-weight,light);
+          font-size: map-get($font-size,xx-medium);
+          color: map-get($color,grey);
+          line-height: 28px;
+          letter-spacing: -.67px;
+        }
+      }
+      .report__image {
+          position: relative;
+          display: flex;
+          img {
+            &:nth-child(2) {
+              position: absolute;
+              top: 0;
+            }
+          }
+      }
+    }
+  }
+
+  .section__procedure {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .procedure__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h4 {
+          color: map-get($color,green);
+          font-size: map-get($font-size,medium);
+          font-weight: map-get($font-weight,bold);
+        }
+        h3 {
+          color: map-get($color,black);
+          font-size: map-get($font-size,xe-large);
+          font-weight: map-get($font-weight,bold);
+          line-height: 43.2px;
+          letter-spacing: -1.35px;
+        }
+        p {
+          font-weight: map-get($font-weight,light);
+          font-size: map-get($font-size,xx-medium);
+          color: map-get($color,grey);
+          line-height: 28px;
+          letter-spacing: -.67px;
+        }
+      }
+      .producer__image {
+          position: relative;
+          display: flex;
+          img {
+            &:nth-child(2) {
+              position: absolute;
+              top: 0;
+            }
+          }
+      }
+    }
+  }
+
+  .section__alarm {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .alarm__data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        h4 {
+          color: map-get($color,green);
+          font-size: map-get($font-size,medium);
+          font-weight: map-get($font-weight,bold);
+        }
+        h3 {
+          color: map-get($color,black);
+          font-size: map-get($font-size,xe-large);
+          font-weight: map-get($font-weight,bold);
+          line-height: 43.2px;
+          letter-spacing: -1.35px;
+        }
+        p {
+          font-weight: map-get($font-weight,light);
+          font-size: map-get($font-size,xx-medium);
+          color: map-get($color,grey);
+          line-height: 28px;
+          letter-spacing: -.67px;
+        }
+      }
+      .alarm__image {
+          position: relative;
+          display: flex;
+          img {
+            &:nth-child(2) {
+              position: absolute;
+              top: 0;
+            }
+          }
+      }
+    }
+  }
+  
+  .section__price {
+    &__container {
+      h2 {
+        font-weight: map-get($font-weight,bold);
+        font-size: map-get($font-size,medium);
+        color: map-get($color,green);
+        span {
+          font-weight: map-get($font-weight,light);
+        }
+      }
+
+      .price__grid {
+        display: grid;
+        grid-template-columns: 340px;
+
+        &__item {
+          border: 1px solid red;
+          border-radius: map-get($radius,large);
+          background-color: map-get($color,grey2);
+
+          h3 {
+            color: #333D4B;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 28.8px;
+            letter-spacing: -.9px;
+          }
+
+          p {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 19.2px;
+            letter-spacing: -.6px;
+          }
+
+          h4 {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 38.4px;
+            letter-spacing: -1.2px;
+          }
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include btn(292px,64px);
+            border-radius: 8px;
+            background-color: #0E7159;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+

@@ -1,3 +1,292 @@
-body {
-  background-color: #333D4B;
+a {
+  display: block;
+  text-decoration: none;
+}
+
+.header {
+  padding-block: 20px;
+  background-color: #fff;
+}
+.header__container {
+  padding-inline: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__container > h1 a {
+  font-size: 32px;
+}
+.header__container > .btn--group .question {
+  display: none;
+  width: 90px;
+  height: 30px;
+  font-size: 12px;
+}
+.header__container > .btn--group .start {
+  display: flex;
+  width: 90px;
+  height: 30px;
+  color: #fff;
+  background-color: #0E7159;
+  font-size: 12px;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+main .section__home {
+  width: 100%;
+  height: 192px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .section__home__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .section__home__container * {
+  z-index: 10;
+}
+main .section__home__container h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28.8px;
+  letter-spacing: -0.9px;
+}
+main .section__home__container a {
+  display: none;
+  color: white;
+}
+main .section__service__container > h3 {
+  text-align: center;
+  color: #0E7159;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25.2px;
+  letter-spacing: -0.79px;
+}
+main .section__service__container > h3 span {
+  font-weight: 500;
+}
+main .section__service__container > a {
+  text-align: center;
+}
+main .section__service__container .service__grid {
+  display: grid;
+  grid-template-columns: 293px;
+  justify-content: center;
+}
+main .section__service__container .service__grid__item:nth-child(1) {
+  color: blue;
+}
+main .section__realstate__container > h3 {
+  text-align: center;
+  color: #0E7159;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25.2px;
+  letter-spacing: -0.79px;
+}
+main .section__realstate__container > h3 span {
+  font-weight: 500;
+}
+main .section__realstate__container > a {
+  text-align: center;
+}
+main .section__realstate__container .realstate__grid {
+  display: grid;
+  grid-template-columns: 293px;
+  justify-content: center;
+}
+main .section__realstate__container .realstate__grid__item:nth-child(1) {
+  color: blue;
+}
+main .section__security__container > h3 {
+  text-align: center;
+  color: #0E7159;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25.2px;
+  letter-spacing: -0.79px;
+}
+main .section__security__container > h3 span {
+  font-weight: 500;
+}
+main .section__security__container > a {
+  text-align: center;
+}
+main .section__security__container .security__grid {
+  display: grid;
+  grid-template-columns: 292px;
+  justify-content: center;
+}
+main .section__security__container .security__grid__item h4:first-child {
+  font-size: 21px;
+  color: blue;
+}
+main .section__report__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .section__report__container .report__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .section__report__container .report__data h4 {
+  color: #0E7159;
+  font-size: 24px;
+  font-weight: 700;
+}
+main .section__report__container .report__data h3 {
+  color: #000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  letter-spacing: -1.35px;
+}
+main .section__report__container .report__data p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #6B7684;
+  line-height: 28px;
+  letter-spacing: -0.67px;
+}
+main .section__report__container .report__image {
+  position: relative;
+  display: flex;
+}
+main .section__report__container .report__image img:nth-child(2) {
+  position: absolute;
+  top: 0;
+}
+main .section__procedure__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .section__procedure__container .procedure__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .section__procedure__container .procedure__data h4 {
+  color: #0E7159;
+  font-size: 24px;
+  font-weight: 700;
+}
+main .section__procedure__container .procedure__data h3 {
+  color: #000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  letter-spacing: -1.35px;
+}
+main .section__procedure__container .procedure__data p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #6B7684;
+  line-height: 28px;
+  letter-spacing: -0.67px;
+}
+main .section__procedure__container .producer__image {
+  position: relative;
+  display: flex;
+}
+main .section__procedure__container .producer__image img:nth-child(2) {
+  position: absolute;
+  top: 0;
+}
+main .section__alarm__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .section__alarm__container .alarm__data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main .section__alarm__container .alarm__data h4 {
+  color: #0E7159;
+  font-size: 24px;
+  font-weight: 700;
+}
+main .section__alarm__container .alarm__data h3 {
+  color: #000;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43.2px;
+  letter-spacing: -1.35px;
+}
+main .section__alarm__container .alarm__data p {
+  font-weight: 500;
+  font-size: 18px;
+  color: #6B7684;
+  line-height: 28px;
+  letter-spacing: -0.67px;
+}
+main .section__alarm__container .alarm__image {
+  position: relative;
+  display: flex;
+}
+main .section__alarm__container .alarm__image img:nth-child(2) {
+  position: absolute;
+  top: 0;
+}
+main .section__price__container h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #0E7159;
+}
+main .section__price__container h2 span {
+  font-weight: 500;
+}
+main .section__price__container .price__grid {
+  display: grid;
+  grid-template-columns: 340px;
+}
+main .section__price__container .price__grid__item {
+  border: 1px solid red;
+  border-radius: 16px;
+  background-color: #F2F3F4;
+}
+main .section__price__container .price__grid__item h3 {
+  color: #333D4B;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  letter-spacing: -0.9px;
+}
+main .section__price__container .price__grid__item p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.2px;
+  letter-spacing: -0.6px;
+}
+main .section__price__container .price__grid__item h4 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  letter-spacing: -1.2px;
+}
+main .section__price__container .price__grid__item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 292px;
+  height: 64px;
+  border-radius: 8px;
+  background-color: #0E7159;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
