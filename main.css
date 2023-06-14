@@ -1,0 +1,161 @@
+/* :root {
+  --first-color: hsl(225, 72%, 55%);
+  --text-color: hsl(225, 52%, 30%);
+  --body-color: linear-gradient(180deg,hsl(225, 75%, 92%),hsl(225, 78%, 70%));
+  --container-color: hsl(225, 75%, 97%);
+} */
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h5 {
+  color: grey;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: white;
+}
+
+body {
+  background-color: #26272c;
+}
+
+.inner {
+  /* background-color: pink; */
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+}
+
+.header .profile {
+  font-family: 'Racing Sans One',cursive;
+  font-size: 1.5rem;
+}
+
+.header__box {
+  font-family: 'Shrikhand', cursive;
+}
+
+/* 
+section__head
+*/
+
+.section__head {
+  padding-block: 30px;
+  /* background-color: red; */
+}
+
+.head__box {
+  display: flex;
+  /* background-color: yellowgreen; */
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.head__image {
+  width: 70px;
+  height: 70px;
+}
+
+.head__image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.head__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.head__data h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.head__data h5 {
+  font-size: .8rem;
+  text-indent: 5px;
+}
+
+/* 
+section__profile 
+*/
+
+.section__profile {
+  /* background-color: blue; */
+  margin-top: 40px;
+}
+
+.profile__container {
+
+}
+
+.profile__container h2 {
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.profile__container h2:first-child:after {
+  text-transform: uppercase;
+  position: absolute;
+  top: -85%;
+  left: 3px;
+  font-size: .7rem;
+  color: grey;
+}
+
+.profile__container > h2 {
+  position: relative;
+  font-size: 2rem;
+}
+
+.profile__container > h2:first-child:after {
+  content: "profile";
+  text-transform: uppercase;
+  position: absolute;
+  top: -70%;
+  left: 3px;
+  font-size: 1.25rem;
+  color: grey;
+}
+
+.profile__box {
+  margin-top: 50px;
+}
+
+.bin {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.bin h2:first-child {
+  flex: 30%;
+}
+
+.bin h2:last-child {
+  flex: 70%;
+}
+
+.profile__name h2:first-child::after {
+  content: "name";
+} 
+
+.profile__birthday h2:first-child::after {
+  content: "birthday";
+} 
+
+
+  
+
