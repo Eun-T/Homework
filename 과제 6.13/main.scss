@@ -420,7 +420,7 @@ main {
   }
 
   .section__review {
-
+    margin-bottom: 48px;
     &__container {
       h2 {
         text-align: center;
@@ -435,6 +435,7 @@ main {
 
       > a {
           text-align: center;
+          display: none;
         }
 
       .review__grid {
@@ -446,6 +447,33 @@ main {
           border-radius: map-get($radius,large);
           background-color: map-get($color,grey2);
           padding: 32px;
+          .item__data {
+            margin-bottom: 26px;
+            .data__image {
+
+            }
+            h5 {
+              font-weight: 700;
+              color: #333D4B;
+              font-size: 18px;
+              line-height: 21.6px;
+              letter-spacing: -.67px;
+            }
+            span {
+              font-weight: 500;
+              color: #6B7684;
+              font-size: 18px;
+              line-height: 32px;
+              letter-spacing: -.67px;
+            }
+          }
+          p {
+            font-weight: 500;
+            color: #6B7684;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -.67px;
+          }
         }
       }
     }
@@ -460,7 +488,7 @@ main {
       h1 {
         text-align: center;
         color: white;
-        font-size: 32px;
+        font-size: 36px;
         line-height: 43.2px;
         letter-spacing: -1.35px;
         font-weight: 700;
@@ -485,7 +513,8 @@ main {
 
   .footer {
     padding-left: 44px;
-    padding-block-start: 26px;
+    padding-block: 26px 24px;
+
     &__container {
       h5 {
         font-weight: 700;

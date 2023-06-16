@@ -257,6 +257,9 @@ main .section__security__container > a {
   letter-spacing: -0.67px;
 }
 
+.section__review {
+  margin-bottom: 48px;
+}
 .section__review__container h2 {
   text-align: center;
   font-weight: 700;
@@ -269,6 +272,7 @@ main .section__security__container > a {
 }
 .section__review__container > a {
   text-align: center;
+  display: none;
 }
 .section__review__container .review__grid {
   display: grid;
@@ -280,6 +284,30 @@ main .section__security__container > a {
   border-radius: 16px;
   background-color: #F2F3F4;
   padding: 32px;
+}
+.section__review__container .review__grid__item .item__data {
+  margin-bottom: 26px;
+}
+.section__review__container .review__grid__item .item__data h5 {
+  font-weight: 700;
+  color: #333D4B;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: -0.67px;
+}
+.section__review__container .review__grid__item .item__data span {
+  font-weight: 500;
+  color: #6B7684;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.67px;
+}
+.section__review__container .review__grid__item p {
+  font-weight: 500;
+  color: #6B7684;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.67px;
 }
 
 .section__start {
@@ -293,7 +321,7 @@ main .section__security__container > a {
 .section__start__container h1 {
   text-align: center;
   color: white;
-  font-size: 32px;
+  font-size: 36px;
   line-height: 43.2px;
   letter-spacing: -1.35px;
   font-weight: 700;
@@ -317,7 +345,7 @@ main .section__security__container > a {
 
 .footer {
   padding-left: 44px;
-  padding-block-start: 26px;
+  padding-block: 26px 24px;
 }
 .footer__container h5 {
   font-weight: 700;
