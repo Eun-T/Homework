@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -40,6 +46,7 @@ main .section__home {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-block-end: 64px;
 }
 main .section__home__container {
   height: 100%;
@@ -63,11 +70,10 @@ main .section__home__container a {
   display: none;
   color: white;
 }
-main .section__service {
-  -webkit-padding-before: 64px;
-          padding-block-start: 64px;
+main .section__service, main .section__realstate {
+  padding-block-end: 84px;
 }
-main .section__service__container > h3 {
+main .section__service__container > h3, main .section__realstate__container > h3 {
   text-align: center;
   color: #0E7159;
   font-weight: 700;
@@ -76,41 +82,37 @@ main .section__service__container > h3 {
   letter-spacing: -0.79px;
   margin-bottom: 42px;
 }
-main .section__service__container > h3 span {
+main .section__service__container > h3 span, main .section__realstate__container > h3 span {
   font-weight: 500;
 }
-main .section__service__container > a {
+main .section__service__container > a, main .section__realstate__container > a {
   text-align: center;
+  display: none;
 }
-main .section__service__container .service__grid {
+main .section__service__container .service__grid, main .section__service__container .realstate__grid, main .section__realstate__container .service__grid, main .section__realstate__container .realstate__grid {
   display: grid;
   grid-template-columns: 293px;
   justify-content: center;
 }
-main .section__service__container .service__grid__item:nth-of-type(2) {
-  color: pink;
+main .section__service__container .service__grid__item, main .section__service__container .realstate__grid__item, main .section__realstate__container .service__grid__item, main .section__realstate__container .realstate__grid__item {
+  margin-bottom: 32px;
 }
-main .section__realstate__container > h3 {
-  text-align: center;
-  color: #0E7159;
+main .section__service__container .service__grid__item .service__image, main .section__service__container .service__grid__item .realstate__image, main .section__service__container .realstate__grid__item .service__image, main .section__service__container .realstate__grid__item .realstate__image, main .section__realstate__container .service__grid__item .service__image, main .section__realstate__container .service__grid__item .realstate__image, main .section__realstate__container .realstate__grid__item .service__image, main .section__realstate__container .realstate__grid__item .realstate__image {
+  margin-bottom: 21px;
+}
+main .section__service__container .service__grid__item > h4, main .section__service__container .realstate__grid__item > h4, main .section__realstate__container .service__grid__item > h4, main .section__realstate__container .realstate__grid__item > h4 {
   font-weight: 700;
   font-size: 21px;
   line-height: 25.2px;
   letter-spacing: -0.79px;
+  margin-bottom: 17px;
 }
-main .section__realstate__container > h3 span {
+main .section__service__container .service__grid__item > p, main .section__service__container .realstate__grid__item > p, main .section__realstate__container .service__grid__item > p, main .section__realstate__container .realstate__grid__item > p {
+  color: #6B7684;
   font-weight: 500;
-}
-main .section__realstate__container > a {
-  text-align: center;
-}
-main .section__realstate__container .realstate__grid {
-  display: grid;
-  grid-template-columns: 293px;
-  justify-content: center;
-}
-main .section__realstate__container .realstate__grid__item:nth-child(1) {
-  color: blue;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.6px;
 }
 main .section__security__container > h3 {
   text-align: center;
@@ -119,173 +121,124 @@ main .section__security__container > h3 {
   font-size: 21px;
   line-height: 25.2px;
   letter-spacing: -0.79px;
-}
-main .section__security__container > h3 span {
-  font-weight: 500;
-}
-main .section__security__container > a {
-  text-align: center;
+  margin-bottom: 46px;
 }
 main .section__security__container .security__grid {
   display: grid;
   grid-template-columns: 292px;
   justify-content: center;
 }
-main .section__security__container .security__grid__item h4:first-child {
-  font-size: 21px;
-  color: blue;
+main .section__security__container .security__grid__item span {
+  color: #0E7159;
 }
-main .section__report__container {
+main .section__security__container > a {
+  text-align: center;
+}
+
+.section__report, .section__procedure, .section__alarm {
+  margin: auto;
+  width: 340px;
+  margin-bottom: 157px;
+}
+.section__report__container, .section__procedure__container, .section__alarm__container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main .section__report__container .report__data {
+.section__report__container .report__data, .section__report__container .procedure__data, .section__report__container .alarm__data, .section__procedure__container .report__data, .section__procedure__container .procedure__data, .section__procedure__container .alarm__data, .section__alarm__container .report__data, .section__alarm__container .procedure__data, .section__alarm__container .alarm__data {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-main .section__report__container .report__data h4 {
+.section__report__container .report__data h4, .section__report__container .procedure__data h4, .section__report__container .alarm__data h4, .section__procedure__container .report__data h4, .section__procedure__container .procedure__data h4, .section__procedure__container .alarm__data h4, .section__alarm__container .report__data h4, .section__alarm__container .procedure__data h4, .section__alarm__container .alarm__data h4 {
   color: #0E7159;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 33px;
 }
-main .section__report__container .report__data h3 {
+.section__report__container .report__data h3, .section__report__container .procedure__data h3, .section__report__container .alarm__data h3, .section__procedure__container .report__data h3, .section__procedure__container .procedure__data h3, .section__procedure__container .alarm__data h3, .section__alarm__container .report__data h3, .section__alarm__container .procedure__data h3, .section__alarm__container .alarm__data h3 {
   color: #000;
   font-size: 36px;
   font-weight: 700;
   line-height: 43.2px;
   letter-spacing: -1.35px;
+  margin-bottom: 33px;
 }
-main .section__report__container .report__data p {
+.section__report__container .report__data p, .section__report__container .procedure__data p, .section__report__container .alarm__data p, .section__procedure__container .report__data p, .section__procedure__container .procedure__data p, .section__procedure__container .alarm__data p, .section__alarm__container .report__data p, .section__alarm__container .procedure__data p, .section__alarm__container .alarm__data p {
   font-weight: 500;
   font-size: 18px;
   color: #6B7684;
   line-height: 28px;
   letter-spacing: -0.67px;
+  margin-bottom: 33px;
 }
-main .section__report__container .report__image {
+.section__report__container .report__image, .section__report__container .producer__image, .section__report__container .alarm__image, .section__procedure__container .report__image, .section__procedure__container .producer__image, .section__procedure__container .alarm__image, .section__alarm__container .report__image, .section__alarm__container .producer__image, .section__alarm__container .alarm__image {
   position: relative;
   display: flex;
 }
-main .section__report__container .report__image img:nth-child(2) {
+.section__report__container .report__image img:nth-child(2), .section__report__container .producer__image img:nth-child(2), .section__report__container .alarm__image img:nth-child(2), .section__procedure__container .report__image img:nth-child(2), .section__procedure__container .producer__image img:nth-child(2), .section__procedure__container .alarm__image img:nth-child(2), .section__alarm__container .report__image img:nth-child(2), .section__alarm__container .producer__image img:nth-child(2), .section__alarm__container .alarm__image img:nth-child(2) {
   position: absolute;
   top: 0;
+  left: 50%;
+  transform: translate(-50%);
 }
-main .section__procedure__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.section__price {
+  margin-bottom: 53px;
 }
-main .section__procedure__container .procedure__data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.section__price__container h2 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #0E7159;
   text-align: center;
+  margin-bottom: 42px;
 }
-main .section__procedure__container .procedure__data h4 {
-  color: #0E7159;
-  font-size: 24px;
-  font-weight: 700;
-}
-main .section__procedure__container .procedure__data h3 {
-  color: #000;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 43.2px;
-  letter-spacing: -1.35px;
-}
-main .section__procedure__container .procedure__data p {
-  font-weight: 500;
-  font-size: 18px;
-  color: #6B7684;
-  line-height: 28px;
-  letter-spacing: -0.67px;
-}
-main .section__procedure__container .producer__image {
-  position: relative;
-  display: flex;
-}
-main .section__procedure__container .producer__image img:nth-child(2) {
-  position: absolute;
-  top: 0;
-}
-main .section__alarm__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main .section__alarm__container .alarm__data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-main .section__alarm__container .alarm__data h4 {
-  color: #0E7159;
-  font-size: 24px;
-  font-weight: 700;
-}
-main .section__alarm__container .alarm__data h3 {
-  color: #000;
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 43.2px;
-  letter-spacing: -1.35px;
-}
-main .section__alarm__container .alarm__data p {
-  font-weight: 500;
-  font-size: 18px;
-  color: #6B7684;
-  line-height: 28px;
-  letter-spacing: -0.67px;
-}
-main .section__alarm__container .alarm__image {
-  position: relative;
-  display: flex;
-}
-main .section__alarm__container .alarm__image img:nth-child(2) {
-  position: absolute;
-  top: 0;
-}
-main .section__price__container h2 {
-  font-weight: 700;
-  font-size: 24px;
-  color: #0E7159;
-}
-main .section__price__container h2 span {
+.section__price__container h2 span {
   font-weight: 500;
 }
-main .section__price__container .price__grid {
+.section__price__container .price__grid {
   display: grid;
   grid-template-columns: 340px;
   justify-content: center;
+  row-gap: 32px;
+  margin-bottom: 33px;
 }
-main .section__price__container .price__grid__item {
+.section__price__container .price__grid__item {
   border-radius: 16px;
   background-color: #F2F3F4;
+  padding: 30px 24px 24px;
 }
-main .section__price__container .price__grid__item h3 {
+.section__price__container .price__grid__item h3 {
   color: #333D4B;
   font-size: 24px;
   font-weight: 500;
   line-height: 28.8px;
   letter-spacing: -0.9px;
+  margin-bottom: 28px;
 }
-main .section__price__container .price__grid__item p {
+.section__price__container .price__grid__item p {
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
   letter-spacing: -0.6px;
+  color: #6B7684;
 }
-main .section__price__container .price__grid__item h4 {
+.section__price__container .price__grid__item p:nth-of-type(1) {
+  margin-bottom: 42px;
+}
+.section__price__container .price__grid__item p:nth-of-type(2) {
+  margin-bottom: 15px;
+}
+.section__price__container .price__grid__item h4 {
   font-size: 32px;
   font-weight: 700;
   line-height: 38.4px;
   letter-spacing: -1.2px;
+  margin-bottom: 15px;
+  color: #0E7159;
 }
-main .section__price__container .price__grid__item a {
+.section__price__container .price__grid__item a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -295,40 +248,49 @@ main .section__price__container .price__grid__item a {
   background-color: #0E7159;
   color: #fff;
 }
-main .section__price__container > a {
+.section__price__container > a {
   text-align: center;
+  color: #0E7159;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21.6px;
+  letter-spacing: -0.67px;
 }
-main .section__review__container h2 {
+
+.section__review__container h2 {
   text-align: center;
   font-weight: 700;
   font-size: 24px;
   color: #0E7159;
+  margin-bottom: 27px;
 }
-main .section__review__container h2 span {
+.section__review__container h2 span {
   font-weight: 500;
 }
-main .section__review__container > a {
+.section__review__container > a {
   text-align: center;
 }
-main .section__review__container .review__grid {
+.section__review__container .review__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  justify-content: center;
+  grid-template-columns: 394px;
   gap: 20px;
 }
-main .section__review__container .review__grid__item {
+.section__review__container .review__grid__item {
   border-radius: 16px;
   background-color: #F2F3F4;
   padding: 32px;
 }
-main .section__start {
+
+.section__start {
   width: 100%;
   background-color: #0E7159;
 }
-main .section__start__container {
+.section__start__container {
   padding-block: 210px;
   padding-inline: 18px;
 }
-main .section__start__container h1 {
+.section__start__container h1 {
   text-align: center;
   color: white;
   font-size: 32px;
@@ -336,7 +298,7 @@ main .section__start__container h1 {
   letter-spacing: -1.35px;
   font-weight: 700;
 }
-main .section__start__container a {
+.section__start__container a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -350,22 +312,21 @@ main .section__start__container a {
   line-height: 19.2px;
   letter-spacing: -0.6px;
   margin: auto;
-  -webkit-margin-before: 60px;
-          margin-block-start: 60px;
+  margin-block-start: 60px;
 }
-main .footer {
+
+.footer {
   padding-left: 44px;
-  -webkit-padding-before: 26px;
-          padding-block-start: 26px;
+  padding-block-start: 26px;
 }
-main .footer__container h5 {
+.footer__container h5 {
   font-weight: 700;
   font-size: 16px;
   letter-spacing: -0.6px;
   line-height: 19.2px;
   margin-bottom: 18px;
 }
-main .footer__container p {
+.footer__container p {
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
