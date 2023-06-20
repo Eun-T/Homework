@@ -5,23 +5,27 @@ const home = document.querySelector('.home')
 //이미지 array
 const image = ['https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1','https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1','https://images.pexels.com/photos/1324803/pexels-photo-1324803.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1']
 
-let date = new Date()
 
-let num = Math.floor(Math.random(10) * 100) % 3;
+function getImage(){
+  let a = Math.floor(Math.random(10)*100 % 2)
+  return home.style.backgroundImage = `url(${image[a]})`
+}
 
-// num = setInterval(() => {
-//   let getNum = Math.floor(Math.random(10) * 100) % 3
-//   console.log(getNum)
-//   return getNum
-// }, 1000);
+function getCurrentTime(){
+  const date = new Date()
+  return clock.textContent=`
+  ${date.getHours()}:${date.getMinutes()}:${date.getSeconds().toString().length == 1 ? '0'+date.getSeconds() : date.getSeconds()}
+  `
+}
 
-clock.textContent = `
-${date.getHours() > 12 ? date.getHours()-12 : date.getHours()}:${date.getMinutes()}
-`
+setInterval(() => {
+  getCurrentTime()
+}, 1000);
+
+setInterval(() => {
+  getImage()
+}, 1000);
 
 hello.innerHTML = `
   Good morning, Levi
 `
-
-home.style.backgroundImage = `url(${image[num]})`
-
